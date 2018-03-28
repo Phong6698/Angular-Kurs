@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="book">
+  <h3>{{ book.title }}</h3>
+  <p>{{ book.subtitle }}</p>
+  <p>{{ book.author }}</p>
+  <p>{{ book.numPages }}</p>
+</ng-container>
+<a [routerLink]="['edit']">Edit</a>
+
+<!-- <h3>{{ book.title }}</h3> geht auch mit fragezeichen "?" -->

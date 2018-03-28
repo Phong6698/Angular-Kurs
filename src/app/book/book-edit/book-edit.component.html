@@ -1,0 +1,22 @@
+<form #form="ngForm" (ngSubmit)="save(form.value)" *ngIf="book">
+  <input
+    type="text"
+    [(ngModel)]="book.title"
+    name="title"
+    #title="ngModel"
+    required
+    minlength="3"
+    maxlength="50"
+    ngStyle=""
+  >
+  <div [hidden]="!title.errors?.required || title.pristine">Required</div>
+  <div [hidden]="!title.errors?.minlength || title.pristine">Min Length is {{ title.errors?.minlength?.requiredLength }}</div>
+  <input
+    type="text"
+    [(ngModel)]="book.subtitle"
+    name="subtitle"
+    #subtitle="ngModel"
+    required
+  >
+  <button type="submit" [disabled]="!form.valid">Save</button>
+</form>

@@ -1,0 +1,10 @@
+
+<form [formGroup]="form" (ngSubmit)="create()">
+
+  <input type="text" formControlName="title">
+  <div *ngIf="form.get('title').hasError('required')">Required</div>
+  <div *ngIf="form.get('title').hasError('minlength')">Min Length {{form.get('title').errors?.minlength?.requiredLength}}</div>
+  <input type="text" formControlName="subtitle">
+
+  <button type="submit">Create</button>
+</form>

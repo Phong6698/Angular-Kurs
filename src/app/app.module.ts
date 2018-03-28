@@ -4,15 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { InfoBoxComponent } from './info-box/info-box.component';
+import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
+import {HttpClientModule} from '@angular/common/http';
+import { TooltipDirective } from './shared/tooltip.directive';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InfoBoxComponent,
+    MouseCursorComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

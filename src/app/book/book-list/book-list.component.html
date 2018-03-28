@@ -1,0 +1,7 @@
+<h3>Books</h3>
+<ul>
+  <li *ngFor="let book of books">
+    <a [routerLink]="[book.isbn]" tooltip="{{book.title}}"> {{ book.title }} </a></li>
+</ul>
+<a [routerLink]="'new'"> New</a>
+
